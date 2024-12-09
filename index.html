@@ -9,9 +9,7 @@
   </head>
 
   <body class="bg-neutral-200 text-neutral-700">
-    <!--================================================
-                        Navigation bar 
-    =================================================-->
+    <!-------------------------------------------------------------------- Navigation bar -->
     <div class="navbar bg-neutral-100">
       <div class="navbar-start">
         <button class="bg-lime-300 border-none text-black px-6 py-2 rounded-md font-semibold">Blog</button>
@@ -27,9 +25,13 @@
       </div>
     </div>
 
-    <!--================================================
-                        Donation cards
-    =================================================-->
+    <!-------------------------------------------------------------------- Toggle tabs -->
+    <div class="flex gap-8 justify-center">
+      <button id="toggle-donation" class="active-btn btn btn-ghost bg-neutral-300">Donation</button>
+      <button id="toggle-history" class="btn btn-ghost bg-neutral-300">History</button>
+    </div>
+
+    <!-------------------------------------------------------------------- Donation cards -->
     <div id="donation-cards" class="flex flex-col gap-6">
       <div class="w-11/12 mx-auto p-4 bg-neutral-100 border-4 border-neutral-300 rounded-xl grid grid-cols-2 gap-8 items-center shadow-xl">
         <img class="rounded-xl block w-full aspect-[4/3] object-cover" src="assets/noakhali.png" />
@@ -80,6 +82,9 @@
         </div>
       </div>
     </div>
+
+    <!-------------------------------------------------------------------- Donation History -->
+    <div></div>
 
     <script src="scripts/main.js"></script>
   </body>

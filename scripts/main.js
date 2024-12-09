@@ -18,7 +18,6 @@ function donationInput(id) {
   }
   return valueOnNumber;
 }
-
 document.getElementById("btn-contribution-noakhali").addEventListener("click", function () {
   const inputAmount = donationInput("input-noakhali");
   const previousAmount = previousContributionsVlaue("contribution-noakhali");
@@ -30,7 +29,6 @@ document.getElementById("btn-contribution-noakhali").addEventListener("click", f
   document.getElementById("contribution-noakhali").innerText = totalNoakhaliAmount;
   document.getElementById("input-noakhali").value = "";
 });
-
 document.getElementById("btn-contribution-feni").addEventListener("click", function () {
   const inputAmount = donationInput("input-feni");
   const previousAmount = previousContributionsVlaue("contribution-feni");
@@ -42,7 +40,6 @@ document.getElementById("btn-contribution-feni").addEventListener("click", funct
   document.getElementById("contribution-feni").innerText = totalFeniAmount;
   document.getElementById("input-feni").value = "";
 });
-
 document.getElementById("btn-contribution-protest").addEventListener("click", function () {
   const inputAmount = donationInput("input-protest");
   const previousAmount = previousContributionsVlaue("contribution-protest");
@@ -53,4 +50,17 @@ document.getElementById("btn-contribution-protest").addEventListener("click", fu
   const totalProtestAmount = previousAmount + inputAmount;
   document.getElementById("contribution-protest").innerText = totalProtestAmount;
   document.getElementById("input-protest").value = "";
+});
+
+document.getElementById("toggle-donation").addEventListener("click", function () {
+  document.getElementById("toggle-donation").classList.add("bg-sky-400");
+  document.getElementById("toggle-history").classList.remove("bg-sky-400");
+  document.getElementById("donation-cards").classList.remove("hidden");
+  document.getElementById("history-cards").classList.add("hidden");
+});
+document.getElementById("toggle-history").addEventListener("click", function () {
+  document.getElementById("toggle-history").classList.add("bg-sky-400");
+  document.getElementById("toggle-donation").classList.remove("bg-sky-400");
+  document.getElementById("history-cards").classList.remove("hidden");
+  document.getElementById("donation-cards").classList.add("hidden");
 });
