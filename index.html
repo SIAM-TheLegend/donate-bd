@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="bg-neutral-200 text-neutral-700" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-neutral-200 text-neutral-700">
+  <body>
     <!-------------------------------------------------------------------- Navigation bar -->
     <div class="navbar bg-neutral-100">
       <div class="navbar-start">
@@ -26,9 +26,9 @@
     </div>
 
     <!-------------------------------------------------------------------- Toggle tabs -->
-    <div class="flex gap-8 justify-center">
-      <button id="toggle-donation" class="active-btn btn btn-ghost bg-neutral-300">Donation</button>
-      <button id="toggle-history" class="btn btn-ghost bg-neutral-300">History</button>
+    <div class="flex gap-8 justify-center my-4">
+      <button id="toggle-donation" class="btn btn-ghost text-black text-lg bg-neutral-300 bg-sky-400">Donation</button>
+      <button id="toggle-history" class="btn btn-ghost text-black text-lg bg-neutral-300">History</button>
     </div>
 
     <!-------------------------------------------------------------------- Donation cards -->
@@ -84,7 +84,7 @@
     </div>
 
     <!-------------------------------------------------------------------- Donation History -->
-    <div></div>
+    <div id="history-cards"></div>
 
     <script src="scripts/main.js"></script>
   </body>
