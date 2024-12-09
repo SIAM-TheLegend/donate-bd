@@ -6,6 +6,11 @@ function previousContributionsVlaue(id) {
 function donationInput(id) {
   const value = document.getElementById(id).value;
   const valueOnNumber = parseFloat(value);
+  console.log(isNaN(valueOnNumber));
+  if (isNaN(valueOnNumber) || valueOnNumber <= 0) {
+    alert("Invalid Input");
+    return 0;
+  }
   return valueOnNumber;
 }
 
