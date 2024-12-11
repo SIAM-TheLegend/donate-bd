@@ -1,3 +1,4 @@
+// Donation related tasks------------------------------------------------------------------------------------------
 function previousContributionsVlaue(id) {
   const proviousContribution = document.getElementById(id).innerText;
   const proviousContributionOnNumber = parseFloat(proviousContribution);
@@ -52,15 +53,19 @@ document.getElementById("btn-contribution-protest").addEventListener("click", fu
   document.getElementById("input-protest").value = "";
 });
 
-document.getElementById("toggle-donation").addEventListener("click", function () {
-  document.getElementById("toggle-donation").classList.add("bg-sky-400");
-  document.getElementById("toggle-history").classList.remove("bg-sky-400");
-  document.getElementById("donation-cards").classList.remove("hidden");
-  document.getElementById("history-cards").classList.add("hidden");
+// Toggle between tabs ---------------------------------------------------------------------------------------------
+function clickedTab(clicked, disabled) {
+  document.getElementById(`toggle-${clicked}`).classList.add("bg-sky-400");
+  document.getElementById(`toggle-${disabled}`).classList.remove("bg-sky-400");
+  document.getElementById(`${clicked}-cards`).classList.remove("hidden");
+  document.getElementById(`${disabled}-cards`).classList.add("hidden");
+}
+document.getElementById(`toggle-donation`).addEventListener("click", function () {
+  clickedTab("donation", "history");
 });
-document.getElementById("toggle-history").addEventListener("click", function () {
-  document.getElementById("toggle-history").classList.add("bg-sky-400");
-  document.getElementById("toggle-donation").classList.remove("bg-sky-400");
-  document.getElementById("history-cards").classList.remove("hidden");
-  document.getElementById("donation-cards").classList.add("hidden");
+document.getElementById(`toggle-history`).addEventListener("click", function () {
+  clickedTab("history", "donation");
 });
+
+// Create History from donation ------------------------------------------------------------------------------------
+// document.getElementById("").addEventListener("click", function () {});
