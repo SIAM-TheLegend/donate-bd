@@ -12,13 +12,27 @@ function myBalance() {
 function donationInput(id) {
   const value = document.getElementById(id).value;
   const valueOnNumber = parseFloat(value);
-  console.log(isNaN(valueOnNumber));
   if (isNaN(valueOnNumber) || valueOnNumber <= 0) {
     alert("Invalid Input");
     return 0;
   }
   return valueOnNumber;
 }
+function createHistory(donateAmount, titleName) {
+  const donateTitle = document.getElementById(`title-${titleName}`).innerText;
+  const historyTitle = `${donateAmount} Taka has been contributed to ${donateTitle}`;
+  const date = new Date();
+
+  const historyCard = document.createElement("div");
+  historyCard.classList = "mb-6 border-2 border-black rounded-3xl text-center py-6 px-4 w-11/12 mx-auto";
+  historyCard.innerHTML = `
+    <h3 class="text-xl font-semibold">${historyTitle}</h3>
+    <p>Date: ${date}</p>
+  `;
+
+  document.getElementById("history-cards").appendChild(historyCard);
+}
+
 document.getElementById("btn-contribution-noakhali").addEventListener("click", function () {
   const inputAmount = donationInput("input-noakhali");
   const previousAmount = previousContributionsVlaue("contribution-noakhali");
@@ -29,6 +43,8 @@ document.getElementById("btn-contribution-noakhali").addEventListener("click", f
   const totalNoakhaliAmount = previousAmount + inputAmount;
   document.getElementById("contribution-noakhali").innerText = totalNoakhaliAmount;
   document.getElementById("input-noakhali").value = "";
+
+  createHistory(inputAmount, "noakhali");
 });
 document.getElementById("btn-contribution-feni").addEventListener("click", function () {
   const inputAmount = donationInput("input-feni");
@@ -66,6 +82,3 @@ document.getElementById(`toggle-donation`).addEventListener("click", function ()
 document.getElementById(`toggle-history`).addEventListener("click", function () {
   clickedTab("history", "donation");
 });
-
-// Create History from donation ------------------------------------------------------------------------------------
-// document.getElementById("").addEventListener("click", function () {});
