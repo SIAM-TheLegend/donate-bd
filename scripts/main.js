@@ -82,3 +82,8 @@ document.getElementById(`toggle-donation`).addEventListener("click", function ()
 document.getElementById(`toggle-history`).addEventListener("click", function () {
   clickedTab("history", "donation");
 });
+
+// Redirecting to blog/home page
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "blog.html";
+});
