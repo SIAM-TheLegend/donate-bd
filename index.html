@@ -9,33 +9,35 @@
   </head>
 
   <body>
-    <!-------------------------------------------------------------------- Navigation bar -->
-    <div class="navbar bg-neutral-100">
-      <div class="navbar-start">
-        <button id="home-btn" class="bg-lime-300 border-none text-black px-6 py-2 rounded-md font-semibold">Blog</button>
+    <div class="sticky top-0 bg-transparent backdrop-blur-md">
+      <!-------------------------------------------------------------------- Navigation bar -->
+      <div class="navbar bg-neutral-100">
+        <div class="navbar-start">
+          <button id="blog-btn" class="bg-lime-300 border-none text-black px-6 py-2 rounded-md font-semibold">Blog</button>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl text-black">
+            <img src="assets/logo.png" />
+            <span class="hidden md:block">Donate Bangladesh</span></a
+          >
+        </div>
+        <div class="navbar-end">
+          <p class="px-4 py-2 rounded-lg flex items-center gap-1 bg-neutral-200 font-semibold"><img class="inline" src="assets/coin.png" /> <span id="my-balance">5600</span> BDT</p>
+        </div>
       </div>
-      <div class="navbar-center">
-        <a class="btn btn-ghost text-xl text-black">
-          <img src="assets/logo.png" />
-          Donate Bangladesh</a
-        >
-      </div>
-      <div class="navbar-end">
-        <p class="px-4 py-2 rounded-lg flex items-center gap-1 bg-neutral-200 font-semibold"><img class="inline" src="assets/coin.png" /> <span id="my-balance">5600</span> BDT</p>
-      </div>
-    </div>
 
-    <!-------------------------------------------------------------------- Toggle tabs -->
-    <div class="flex gap-8 justify-center my-4">
-      <button id="toggle-donation" class="btn btn-ghost text-black text-lg bg-neutral-300 bg-sky-400">Donation</button>
-      <button id="toggle-history" class="btn btn-ghost text-black text-lg bg-neutral-300">History</button>
+      <!-------------------------------------------------------------------- Toggle tabs -->
+      <div class="flex gap-8 justify-center py-4">
+        <button id="toggle-donation" class="btn btn-ghost text-black text-lg bg-neutral-300 bg-sky-400">Donation</button>
+        <button id="toggle-history" class="btn btn-ghost text-black text-lg bg-neutral-300">History</button>
+      </div>
     </div>
 
     <!-------------------------------------------------------------------- Donation cards -->
-    <div id="donation-cards" class="flex flex-col gap-6">
+    <div id="donation-cards" class="flex flex-col gap-4">
       <div class="w-11/12 mx-auto p-4 bg-neutral-100 border-4 border-neutral-300 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-xl">
         <img class="rounded-xl block w-full aspect-[4/3] object-cover" src="assets/noakhali.png" />
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between h-full gap-5">
           <div class="w-fit">
             <p class="px-4 py-2 rounded-lg flex items-center gap-1 bg-neutral-200 font-semibold"><img class="inline" src="assets/coin.png" /> <span id="contribution-noakhali">680</span> BDT</p>
           </div>
@@ -51,7 +53,7 @@
       </div>
       <div class="w-11/12 mx-auto p-4 bg-neutral-100 border-4 border-neutral-300 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-xl">
         <img class="rounded-xl block w-full aspect-[4/3] object-cover" src="assets/feni.png" />
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between h-full gap-5">
           <div class="w-fit">
             <p class="px-4 py-2 rounded-lg flex items-center gap-1 bg-neutral-200 font-semibold"><img class="inline" src="assets/coin.png" /> <span id="contribution-feni">340</span> BDT</p>
           </div>
@@ -67,7 +69,7 @@
       </div>
       <div class="w-11/12 mx-auto p-4 bg-neutral-100 border-4 border-neutral-300 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center shadow-xl">
         <img class="rounded-xl block w-full aspect-[4/3] object-cover" src="assets/quota-protest.png" />
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between h-full gap-5">
           <div class="w-fit">
             <p class="px-4 py-2 rounded-lg flex items-center gap-1 bg-neutral-200 font-semibold"><img class="inline" src="assets/coin.png" /> <span id="contribution-protest">460</span> BDT</p>
           </div>
