@@ -33,6 +33,10 @@ function createHistory(donateAmount, titleName) {
   document.getElementById("history-cards").appendChild(historyCard);
 }
 
+function modal() {
+  return my_modal.showModal();
+}
+
 document.getElementById("btn-contribution-noakhali").addEventListener("click", function () {
   const inputAmount = donationInput("input-noakhali");
   const previousAmount = previousContributionsVlaue("contribution-noakhali");
@@ -42,6 +46,7 @@ document.getElementById("btn-contribution-noakhali").addEventListener("click", f
   document.getElementById("my-balance").innerText = currentBalance;
   const totalNoakhaliAmount = previousAmount + inputAmount;
   document.getElementById("contribution-noakhali").innerText = totalNoakhaliAmount;
+  modal();
   document.getElementById("input-noakhali").value = "";
 
   createHistory(inputAmount, "noakhali");
@@ -55,6 +60,7 @@ document.getElementById("btn-contribution-feni").addEventListener("click", funct
   document.getElementById("my-balance").innerText = currentBalance;
   const totalFeniAmount = previousAmount + inputAmount;
   document.getElementById("contribution-feni").innerText = totalFeniAmount;
+  modal();
   document.getElementById("input-feni").value = "";
 });
 document.getElementById("btn-contribution-protest").addEventListener("click", function () {
@@ -66,6 +72,7 @@ document.getElementById("btn-contribution-protest").addEventListener("click", fu
   document.getElementById("my-balance").innerText = currentBalance;
   const totalProtestAmount = previousAmount + inputAmount;
   document.getElementById("contribution-protest").innerText = totalProtestAmount;
+  modal();
   document.getElementById("input-protest").value = "";
 });
 
