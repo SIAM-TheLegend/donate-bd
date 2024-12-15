@@ -86,14 +86,15 @@
     </div>
 
     <!-- You can open the modal using ID.showModal() method -->
-    <button class="btn" onclick="my_modal.showModal()">open modal</button>
     <dialog id="my_modal" class="modal">
-      <div class="modal-box">
+      <div class="modal-box bg-neutral-100 text-center">
         <form method="dialog">
           <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click on ✕ button to close</p>
+        <h3 class="text-3xl font-bold">Congratulations!</h3>
+        <img class="w-24 block mx-auto mt-4" src="assets/coin.png" />
+        <p class="py-4 text-lg">You've successfully contributed here.</p>
+        <h4 class="text-white bg-green-400 p-3 rounded-full">SUCCESS</h4>
       </div>
     </dialog>
 
